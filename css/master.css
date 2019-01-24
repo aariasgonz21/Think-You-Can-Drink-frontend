@@ -9,7 +9,6 @@
   min-height: 100%;
 }
 
-
  #loading-wine{
    max-height: 15em;
    margin: auto;
@@ -71,4 +70,56 @@ div.ui.six.wide.column{
 
 .ui.grid>.row>.stretched.column>*, .ui.grid>.stretched.column:not(.row)>*, .ui.grid>.stretched.row>.column>*, .ui.stretched.grid>.column>*, .ui.stretched.grid>.row>.column>* {
   flex-grow: 0.45;
+}
+
+.heading{
+  text-align: center;
+  padding-top: 1em;
+  padding-right: 1em;
+  font-family: oswald, sans-serif;
+  font-weight: 300;
+  font-size: 5em;
+}
+
+div.ui.large.buttons{
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+
+.reg3{
+  font-size: 2em;
+  font-weight:400;
+  line-height: 1.1em;
+}
+
+button.ui.button{
+  font-family: oswald, sans-serif;;
+}
+
+#gender-drink-icon {
+  max-height: 50px;
+  position: absolute;
+  top: 76%;
+  right: 48%;
+}
+
+#ui-input {
+  position: absolute;
+  top: 68%;
+  right: 41%;
+}
+
+.heading2{
+  text-align: center;
+  padding-top: 0.5em;
+  font-family: oswald, sans-serif;
+  font-size: 8em;
+  font-weight: 400;
+}
+
+#marg-icon{
+  position: absolute;
+  top: 30%;
+  right: 48%;
+  max-height: 50px;
 }
