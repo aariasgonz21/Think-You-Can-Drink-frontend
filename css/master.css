@@ -3,16 +3,21 @@
 
 .main-container{
   height: 100%;
-
 }
 
 .ui.grid {
-    min-height: 100%;
+  min-height: 100%;
 }
+
 
  #loading-wine{
    max-height: 15em;
    margin: auto;
+}
+
+.icon-wine{
+  max-height: 3.5em;
+  margin-bottom: -6%;
 }
 
 #title{
@@ -32,11 +37,38 @@
   font-size: 5em;
   font-weight:400;
   line-height: 1.1em;
-
 }
 
 .bold3 {
   font-size: 7em;
   font-weight:700;
   line-height: 1em;
+}
+
+#title-description{
+  font-family: aktiv grotesk, sans-serif;
+  margin-top: 10%;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+div.ui.six.wide.column{
+  margin-top: 20%;
+  margin-left: -9%;
+}
+
+.label-text{
+  font-family: aktiv grotesk, sans-serif;
+  margin-top: -15%;
+  margin-bottom: -50%;
+  text-align: center;
+}
+
+.down-arrow{
+  max-height: 3em;
+  /* margin-top: ; */
+}
+
+.ui.grid>.row>.stretched.column>*, .ui.grid>.stretched.column:not(.row)>*, .ui.grid>.stretched.row>.column>*, .ui.stretched.grid>.column>*, .ui.stretched.grid>.row>.column>* {
+  flex-grow: 0.45;
 }
