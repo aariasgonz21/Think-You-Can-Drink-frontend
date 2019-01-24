@@ -37,12 +37,12 @@
         <div class="ui yellow ten wide column">
           <h1 class="heading">Choose Your <br><span class="reg3">Sex & Weight</span></h1>
           <div class="ui large buttons">
-            <button class="ui button" class="yes-no">MALE</button>
+            <button id="male" class="ui button" class="yes-no">MALE</button>
             <div class="or"></div>
-            <button class="ui button" class="yes-no">FEMALE</button>
+            <button id="female" class="ui button" class="yes-no">FEMALE</button>
           </div>
           <div id="ui-input" class="ui input">
-            <input type="text" placeholder="Weight (lb.)">
+            <input type="text" name="weight" placeholder="Weight (lb.)">
           </div>
           <img id="gender-drink-icon" src="img/cocktail.svg" class="cocktail-icon" alt="cocktail icon">
         </div>
@@ -50,16 +50,16 @@
         </div>
       </div>
       <div class="ui stretched grid">
-        <div class="ui teal column">
+        <div id= "drink-type" class="ui teal column">
           <h1 class="heading2">What'll it Be?</h1>
           <img src="img/margarita.svg" id="marg-icon" alt="margarita icon">
-          <button class="ui inverted button">Wine</button>
+          <button class="btn-wine" class="ui inverted button">Wine</button>
           <div id="wine-div" style="display: none"></div>
-          <button class="ui inverted button">Beer</button>
+          <button class="btn-beer" class="ui inverted button">Beer</button>
           <div id="beer-div" style="display: none"></div>
-          <button class="ui inverted button">Mixed Drinks</button>
+          <button class="btn-mixed" class="ui inverted button">Mixed Drinks</button>
           <div id="mixed-drinks-div" style="display: none"></div>
-          <button class="ui inverted button">Shots</button>
+          <button class="btn-shots"class="ui inverted button">Shots</button>
           <div id="shots-div" style="display: none"></div>
         </div>
       </div>
