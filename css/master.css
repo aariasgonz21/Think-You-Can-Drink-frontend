@@ -1,0 +1,42 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poiret+One'); */
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
+.main-container{
+  height: 100%;
+
+}
+
+.ui.grid {
+    min-height: 100%;
+}
+
+ #loading-wine{
+   max-height: 15em;
+   margin: auto;
+}
+
+#title{
+  text-align: left;
+  margin-left: 1em;
+  margin-top: 10%;
+  font-family: oswald, sans-serif;
+}
+
+.light1{
+  font-size: 4em;
+  font-weight:200;
+  line-height: 1.25em;
+}
+
+.reg2 {
+  font-size: 5em;
+  font-weight:400;
+  line-height: 1.1em;
+
+}
+
+.bold3 {
+  font-size: 7em;
+  font-weight:700;
+  line-height: 1em;
+}
