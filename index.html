@@ -34,16 +34,17 @@
       <div class="ui stretched grid">
         <div class="ui yellow three wide column">
         </div>
-        <div class="ui yellow ten wide column">
+        <div id="content-column" class="ui yellow ten wide column">
           <h1 class="heading">Choose Your <br><span class="reg3">Sex & Weight</span></h1>
-          <div class="ui large buttons">
-            <button id="male" class="ui button" class="yes-no">MALE</button>
-            <div class="or"></div>
-            <button id="female" class="ui button" class="yes-no">FEMALE</button>
-          </div>
-          <div id="ui-input" class="ui input">
-            <input type="text" name="weight" placeholder="Weight (lb.)">
-          </div>
+            <div class="ui large buttons">
+              <button id="male" class="ui button" class="yes-no">MALE</button>
+              <div class="or"></div>
+              <button id="female" class="ui button" class="yes-no">FEMALE</button>
+            </div>
+            <div id="ui-input" class="ui input">
+              <input type="text" name="weight" placeholder="Weight (lb.)">
+              <button class="ui button" type="submit" id="info-submit-1">Submit</button>
+            </div>
           <img id="gender-drink-icon" src="img/cocktail.svg" class="cocktail-icon" alt="cocktail icon">
         </div>
         <div class="ui yellow three wide column">
@@ -63,16 +64,7 @@
         </div>
       </div>
       <div class="ui stretched grid">
-        <div class="ui violet column">
-          <h1 class="heading2">Your List of Drinks</h1>
-          <div class="drink-list"></div>
-          <h2 class="heading" style="margin-left:7%">Is this Correct?</h2>
-          <button class="ui inverted positive basic button">YES</button>
-          <button class="ui inverted negative basic button">NO</button>
-        </div>
-      </div>
-      <div class="ui stretched grid">
-        <div class="ui column">
+        <div class="ui column violet">
           <h1 class="heading2">Results</h1>
           <div class="card-container">
           </div>
