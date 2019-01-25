@@ -68,9 +68,60 @@ function handleTypesOfDrinks (event) {
       beerDivArea.style.display = "block"
       })
     }) //end of fetch
+  } else if (event.target.className === "btn-mixed") {
+    let mixedDivArea = document.querySelector('#mixed-drinks-div');
+    
+    mixedDivArea.innerHTML = "";
+    let createMixedDrinkUl = document.createElement('ul');
+    createMixedDrinkUl.className = "mixed-ul"
+    //append the ul to the div
+    mixedDivArea.append(createMixedDrinkUl)
+    let selectedValMixed = event.target.innerText.toLowerCase();
+    console.log(selectedValMixed)
+
+    fetch('http://localhost:3000/api/v1/alcohols')
+      .then((res) => {
+        return res.json()
+      })
+      .then((data) => {
+        // console.log(data)
+        filterMixedDrinksForValOnly(data).forEach((el) => {
+          console.log(el)
+          renderMixedFilteredList(el)
+          mixedDivArea.style.display = "block"
+        })
+      })//fetch
+  } else if (event.target.className === "btn-shots") {
+    let shotsDivArea = document.querySelector('#shots-div');
+    shotsDivArea.innerHTML = "";
+    let createShotsUl = document.createElement('ul');
+    createShotsUl.className = "shots-ul"
+    //append the ul to the div
+    shotsDivArea.append(createShotsUl)
+    let selectedValShots = event.target.innerText.toLowerCase();
+
+    fetch('http://localhost:3000/api/v1/alcohols')
+      .then((res) => {
+        return res.json()
+      })
+    .then((data) => {
+        // console.log(data)
+      filterDrinksForValOnly(data, selectedValShots).forEach((el) => {
+        renderShotsFilteredList(el)
+        shotsDivArea.style.display = "block"
+
+      })
+    })
   }
 
 
+}
+
+function filterMixedDrinksForValOnly(arr) {
+  let arrOfDrinkSelected = arr.filter((el) => {
+    return el.category === 'mixed'; 
+  })
+  return arrOfDrinkSelected;
 }
 
 function filterDrinksForValOnly(arr, val) {
@@ -95,8 +146,29 @@ function renderBeerFilteredList(obj) {
   //create li
   let beerLi = document.createElement('li');
   beerLi.dataset.id = obj.id
-  beerLi.id = `wine-${obj.id}`
+  beerLi.id = `beer-${obj.id}`
   beerLi.innerText = obj.name
   //append li to the ul
   beerUl.appendChild(beerLi)
+}
+function renderMixedFilteredList(obj) {
+  let mixedUl = document.querySelector('.mixed-ul');
+  //create li
+  let mixedLi = document.createElement('li');
+  mixedLi.dataset.id = obj.id
+  mixedLi.id = `mixed-${obj.id}`
+  mixedLi.innerText = obj.name
+  //append li to the ul
+  mixedUl.appendChild(mixedLi)
+}
+
+function renderShotsFilteredList(obj) {
+  let shotsUl = document.querySelector('.shots-ul');
+  //create li
+  let shotsLi = document.createElement('li');
+ shotsLi.dataset.id = obj.id
+ shotsLi.id = `shots-${obj.id}`
+ shotsLi.innerText = obj.name
+  //append li to the ul
+ shotsUl.appendChild(shotsLi);
 }
